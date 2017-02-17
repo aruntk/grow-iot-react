@@ -1,4 +1,4 @@
-Grow-IoT
+# Grow-IoT
 
 React port of [Grow-IoT](https://github.com/CommonGarden/Grow-IoT/) project
 
