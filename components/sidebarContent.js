@@ -1,5 +1,5 @@
 import React from 'react';
-import MaterialTitlePanel from './material_title_panel';
+import MaterialTitlePanel from './materialTitlePanel';
 
 const styles = {
   sidebar: {

@@ -1,8 +1,8 @@
 import React from 'react'
 import Router from 'next/router'
 import Sidebar from 'react-sidebar'
-import MaterialTitlePanel from '../components/material_title_panel'
-import SidebarContent from '../components/sidebar_content'
+import MaterialTitlePanel from '../components/materialTitlePanel'
+import SidebarContent from '../components/sidebarContent'
 import Modal from '../components/modal'
 import Head from '../components/head'
 
