@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
+//TODO query gql for the thing with uuid
 export default ({ id }) => (
   <div className='thing'>
     <div className='uuid'>
@@ -17,29 +17,25 @@ export default ({ id }) => (
 
     <style jsx>{`
       .thing {
-        width: 800px;
         overflow: hidden;
-        height: 500px;
         display: inline-block;
       }
 
       .uuid {
         float: left;
-        width: 600px;
-        height: 500px;
+        height: 100px;
         background: #333;
         color: #fff;
         text-align: center;
         vertical-align: middle;
-        line-height: 500px;
-        font-size: 40px;
+        line-height: 100px;
       }
 
       .sidebar {
         float: right;
         background: #fff;
         width: 200px;
-        height: 500px;
+        height: 100px;
         text-align: left;
         box-sizing: border-box;
         padding: 20px;
