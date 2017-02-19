@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo'
 
 const getThings = gql`{
 query getThings() {
-  getThings() {
+  getThings(limit: 5) {
     uuid
     token
     owner
