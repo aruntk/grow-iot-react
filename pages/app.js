@@ -107,9 +107,7 @@ export default class extends React.Component {
         />
       }
       {
-        // withData((props) => (
           <ThingsList />
-        // ))
         }
         <style jsx>{`
           .contentHeaderMenuLink: {
