@@ -1,8 +1,21 @@
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
+import moment from 'moment';
 import Thing from './thing'
 
 const THINGS_PER_PAGE = 3
+
+function fromNow(d) {
+  //d is timestamp
+  return moment(d).calendar(null, {
+    lastDay: '[Yesterday]',
+    sameDay: '[Today]',
+    nextDay: '[Tomorrow]',
+    nextWeek: 'DD/MM/YYYY',
+    lastWeek: 'DD/MM/YYYY',
+    sameElse: 'DD/MM/YYYY',
+  });
+}
 
 function ThingsList ({ data: { allThings, loading, _allThingsMeta }, loadMoreThings }) {
   if (loading) {
@@ -32,7 +45,7 @@ function ThingsList ({ data: { allThings, loading, _allThingsMeta }, loadMoreThi
 </div>
 
 <div> Name: {thing.name} </div>
-<div> Registered At: {thing.registeredAt} </div>
+<div> Registered At: {fromNow(thing.registeredAt)} </div>
 
               </a>
             </div>
@@ -43,33 +56,33 @@ function ThingsList ({ data: { allThings, loading, _allThingsMeta }, loadMoreThi
       section {
         padding-bottom: 20px;
       }
-          .thing {
-            display: inline-block;
-          }
-          .thingLink {
-            color: #333;
-            verticalAlign: middle;
-            cursor: pointer;
-            background: #eee;
-            display: inline-block;
-            width: 350px;
-            height: 250px;
-            margin: 10px;
-            border: 2px solid transparent;
-            text-decoration: none;
-          }
+      .thing {
+        display: inline-block;
+      }
+      .thingLink {
+        color: #333;
+        verticalAlign: middle;
+        cursor: pointer;
+        background: #eee;
+        display: inline-block;
+        width: 350px;
+        height: 250px;
+        margin: 10px;
+        border: 2px solid transparent;
+        text-decoration: none;
+      }
 
-          .thingLink:hover {
-            borderColor: blue;
-          }
-.thingLink .component {
-font-size: 20px;
-  font-weight: bold;
-  color: green;
-}
-.thingLink > div {
-  margin : 5px;
-}
+      .thingLink:hover {
+        borderColor: blue;
+      }
+      .thingLink .component {
+        font-size: 20px;
+        font-weight: bold;
+        color: green;
+      }
+      .thingLink > div {
+        margin : 5px;
+      }
       button:before {
         align-self: center;
         border-style: solid;
